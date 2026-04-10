@@ -1,2 +1,2 @@
 cd ../
-sudo cp agent /opt/wss-agent -r
+sudo cp wss-agent /opt/wss-agent -r
