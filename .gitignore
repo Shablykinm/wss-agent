@@ -1,5 +1,4 @@
 # Зависимости
-!package.json
 node_modules/
 package-lock.json
 yarn.lock
@@ -53,3 +52,7 @@ Thumbs.db
 *.key
 *.private
 *.cert
+
+
+
+!package.json
