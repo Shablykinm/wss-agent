@@ -10,7 +10,7 @@ sudo cp wss-agent.service /etc/systemd/system/
 
 #copy to /opt/wss-agent
 cd ../
-sudo cp wss-agent /opt/wss-agent -r
+sudo rsync -av --delete wss-agent/ /opt/wss-agent/
 
 #reload and restart agent
 sudo systemctl daemon-reload && systemctl restart wss-agent
