@@ -1,0 +1,54 @@
+# Зависимости
+node_modules/
+package-lock.json
+yarn.lock
+
+# Данные агента
+data/
+*.log
+*.pid
+*.json
+*.token
+
+# Сертификаты и ключи
+certs/
+*.pem
+*.key
+*.crt
+*.cert
+id_ed25519*
+server-cert.pem
+
+
+# Файлы конфигурации с секретами
+.env
+
+# Логи и отчеты
+logs/
+*.log
+*.txt
+*.json
+
+# Временные файлы
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Файлы отладки
+*.log
+
+# Резервные копии
+*.bak
+*.backup
+*.old
+
+
+# Файлы с чувствительными данными
+*.secret
+*.key
+*.private
+*.cert

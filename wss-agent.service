@@ -1,0 +1,35 @@
+[Unit]
+Description=wss Agent (WebSocket Client)
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/wss-agent
+ExecStart=/usr/bin/node /opt/wss-agent/agent.js
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=wss-agent
+Environment=NODE_ENV=production
+EnvironmentFile=-/opt/wss-agent/.env.agent
+
+# Ограничения безопасности
+PrivateTmp=true
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+
+# Лимиты ресурсов
+LimitNOFILE=65536
+LimitNPROC=512
+
+# Таймауты
+TimeoutStartSec=30
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target
