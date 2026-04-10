@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #pushim
 git add .
 git commit -m "new fix and new bugs :D"
