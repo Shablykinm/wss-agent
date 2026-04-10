@@ -25,7 +25,7 @@ sh ./init-agent.sh
 
 Для проверки работы запускаем 
 ```
-npm -i
+npm i
 node agent.js
 ```
 

@@ -1,14 +1,9 @@
 # Зависимости
 node_modules/
 package-lock.json
-yarn.lock
+agent-config.json
+registration.token
 
-# Данные агента
-data/
-*.log
-*.pid
-*.json
-*.token
 
 # Сертификаты и ключи
 certs/
@@ -23,11 +18,6 @@ server-cert.pem
 # Файлы конфигурации с секретами
 .env
 
-# Логи и отчеты
-logs/
-*.log
-*.txt
-*.json
 
 # Временные файлы
 *.tmp
@@ -54,5 +44,3 @@ Thumbs.db
 *.cert
 
 
-
-!package.json

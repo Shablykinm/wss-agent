@@ -1,0 +1,42 @@
+{
+  "daily_smart_check": {
+    "enabled": true,
+    "schedule": "03:00",
+    "rewrite": true,
+    "file_transfer": {
+      "file_pattern": "/var/log/smart_report/smart_*_{date}.{txt,json}",
+      "date": "today"
+    }
+  },
+  "apache_log": {
+    "enabled": true,
+    "schedule": null,
+    "rewrite": true,
+    "tail_lines": 100,
+    "tail": {
+      "access": "/var/log/apache2/access.log",
+      "error": "/var/log/apache2/error.log"
+    }
+  },
+  "nginx_logs": {
+    "enabled": false,
+    "schedule": null,
+    "rewrite": true,
+    "tail_lines": 100,
+    "tail": {
+      "access": "/var/log/nginx/access.log",
+      "error": "/var/log/nginx/error.log"
+    }
+  },
+  "system_health": {
+    "enabled": true,
+    "schedule": "*/30 * * * *",
+    "rewrite": true,
+    "timeout": 30000,
+    "commands": [
+      "echo '=== System Health Check ==='",
+      "free -h",
+      "df -h | head -10"
+    ]
+  }
+}
