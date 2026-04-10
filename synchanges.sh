@@ -7,11 +7,10 @@ git push
 
 #reload service
 sudo cp wss-agent.service /etc/systemd/system/
-systemctl daemon-reload
 
 #copy to /opt/wss-agent
 cd ../
 sudo cp wss-agent /opt/wss-agent -r
 
 #restart agent
-systemctl restart wss-agent
+sudo systemctl daemon-reload && systemctl restart wss-agent
