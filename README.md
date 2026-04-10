@@ -45,7 +45,6 @@ TIMEZONE=Europe/Moscow
 ```
 
 
-
 # Копируйте systemd unit файл
 ```
 sudo cp wss-agent.service /etc/systemd/system/
